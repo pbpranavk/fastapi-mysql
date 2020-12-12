@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from app.server.routes.obj import router as SimpleRouter
+from .routes import router as SimpleRouter
 
 app = FastAPI()
 app.include_router(SimpleRouter, tags=["Simple"], prefix="/simple")
