@@ -3,8 +3,9 @@ from sqlalchemy.orm import relationship
 
 from .database import Base
 
+
 class Item(Base):
     __tablename__ = "items"
 
     id = Column(Integer, primary_key=True, index=True)
-    text = Column(String, index=True)
+    text = Column(String(120), index=True)
